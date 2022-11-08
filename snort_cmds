@@ -1,0 +1,6 @@
+sniffer mode
+snort -v
+snort -vd
+
+logger mode
+snort -dev -l C:\Snort\log
