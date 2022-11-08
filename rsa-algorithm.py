@@ -1,5 +1,14 @@
 import math
 
+def gcd(a, h):
+	temp = 0
+	while(1):
+		temp = a % h
+		if (temp == 0):
+			return h
+		a = h
+		h = temp
+
 def modInverse(a, m):
      
     for x in range(1, m):
@@ -27,6 +36,8 @@ msg = int(input('Enter the msg:-'))
 
 print("Message data = ", msg)
 
-c = pow(msg, e)
-c = math.fmod(c, n)
-print("Encrypted data = ", c)
+encrypted_msg = (msg^e)%n
+print("Encrypted data = ", encrypted_msg)
+
+decrypt_msg = (encrypted_msg^d)%n
+print("Decrypted Message = ",decrypt_msg)
