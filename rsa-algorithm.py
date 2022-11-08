@@ -1,13 +1,11 @@
 import math
 
-def gcd(a, h):
-	temp = 0
-	while(1):
-		temp = a % h
-		if (temp == 0):
-			return h
-		a = h
-		h = temp
+def modInverse(a, m):
+     
+    for x in range(1, m):
+        if (((a%m) * (x%m)) % m == 1):
+            return x
+    return -1
 
 
 p = int(input('Enter value of p:-'))
@@ -23,8 +21,7 @@ while (e < phi):
 	else:
 		e = e+1
 
-k = 2
-d = (1 + (k*phi))/e
+d = modInverse(e,phi)
 
 msg = int(input('Enter the msg:-'))
 
@@ -33,5 +30,3 @@ print("Message data = ", msg)
 c = pow(msg, e)
 c = math.fmod(c, n)
 print("Encrypted data = ", c)
-
-
