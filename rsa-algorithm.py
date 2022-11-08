@@ -1,5 +1,5 @@
-import math
-
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
 def gcd(a, h):
 	temp = 0
 	while(1):
@@ -36,8 +36,8 @@ msg = int(input('Enter the msg:-'))
 
 print("Message data = ", msg)
 
-encrypted_msg = (msg^e)%n
+encrypted_msg = (msg**e)%n
 print("Encrypted data = ", encrypted_msg)
 
-decrypt_msg = (encrypted_msg^d)%n
+decrypt_msg = (encrypted_msg**d)%n
 print("Decrypted Message = ",decrypt_msg)
